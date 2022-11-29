@@ -11,8 +11,30 @@ export const GridCharacters = ({characters}=[]) => {
             {
                 characters.map((character, index) => (
                      <div className='character-container' key={index}>
-                         <p>{character.name}</p>
-                         <img src={character.image} alt="personaje"/>
+                         <div>
+                            <img src={character.image} alt={character.name}/>
+                         </div>
+                         <div>
+                            <h3>{character.name}</h3>
+                            <h6>
+                                {
+                                    character.status==="Alive"?(
+                                            <>
+                                            <span className='alive'/>
+                                            Alive
+                                            </>
+                                        ):(
+                                            <>
+                                                <span className='dead'/>
+                                                Dead
+                                            </>
+                                        )
+                                }
+                            </h6>
+                            <p className='text-grey'>
+                                <span>Episodios: </span>
+                            </p>
+                         </div>
                      </div>
                 ))
             }
