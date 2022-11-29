@@ -24,7 +24,7 @@ function App() {
       <header className="App-header">
         <h1 className='title'>Rick & Morty</h1>
         {
-          characters.length > 0 ? <GridCharacters characters={characters} /> :
+          characters.length > 0 ? <GridCharacters characters={characters} setCharacters = {setCharacters}/> :
           <>
             <img src={imageRickMorty} alt='Rick & Morty' className='img-home' />
             <button onClick={reqApi} className='btn-search'>Buscar Personajes</button>
